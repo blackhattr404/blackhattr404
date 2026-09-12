@@ -816,10 +816,9 @@
         </div>
     </div>
 
-    <!-- Arka Planda Çalacak Müzik (Örn: MP3 veya Online Akış Linki) -->
-    <!-- İstersen 'src' kısmına doğrudan bir şarkı dosya yolu veya müzik linki ekleyebilirsin -->
+    <!-- Arka Planda Çalacak Müzik -->
     <audio id="bgMusic" loop>
-        <source src="music.mp3" type="audio/ogg">
+        <source src="https://actions.google.com/sounds/v1/ambiences/cyberpunk_city_ambiance.ogg" type="audio/ogg">
         Tarayıcınız ses öğesini desteklemiyor.
     </audio>
 
@@ -1082,7 +1081,8 @@ print(pwd)</pre>
         <h2 style="font-size: 2rem; margin-bottom: 15px;">İLETİŞİME GEÇ</h2>
         <p style="color: var(--text-muted); margin-bottom: 25px;">Projelerini hayata geçirmek ve detayları konuşmak için doğrudan hattan ulaşabilirsin.</p>
         
-        <a href="https://wa.me/447529519666" target="_blank" class="whatsapp-btn">
+        <!-- Normal WhatsApp Uygulamasını Doğrudan Tetikleyen Bağlantı -->
+        <a href="whatsapp://send?phone=447529519666" class="whatsapp-btn">
             💬 WhatsApp ile İletişim: +44 7529 519666
         </a>
         <p style="margin-top: 20px; color: var(--accent); font-weight: bold;">LOG BIRAKMAM...</p>
@@ -1105,7 +1105,7 @@ print(pwd)</pre>
                 modal.style.display = 'none';
             }, 500);
 
-            bgMusic.volume = 0.4; // Ses seviyesi (%40)
+            bgMusic.volume = 0.4;
             bgMusic.play().then(() => {
                 musicPlaying = true;
                 document.getElementById('soundBtn').innerText = '🔊';
